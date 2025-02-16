@@ -16,7 +16,7 @@ function Products() {
             }
 
             try {
-                const res = await axios.get("http://localhost:5000/api/products", {
+                const res = await axios.get("https://products-backend-p3io.onrender.com/api/products", {
                     headers: { Authorization: token }
                 });
                 setProducts(res.data);
