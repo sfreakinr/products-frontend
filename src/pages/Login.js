@@ -14,7 +14,7 @@ function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post(`https://products-backend-p3io.onrender.com/api/auth/login`, { email, password });
+            const res = await axios.post(`${backendURL}/api/auth/login`, { email, password });
             localStorage.setItem("token", res.data.token);
             navigate("/products");
         } catch (err) {
